@@ -45,12 +45,12 @@
           "description": "The storage settings for the Azure Cloud plugin"
       }
     },
-    "kibanaIp": {
+    /*"kibanaIp": {
       "type": "string",
       "metadata": {
           "description": "The public IP address for Kibana"
       }
-    },
+    },*/
     "sharedStorageAccount": {
       "type": "secureObject",
       "metadata": {
