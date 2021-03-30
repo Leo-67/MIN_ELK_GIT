@@ -2032,7 +2032,7 @@
         }
       }
     },
-    {
+    /*{
       "name": "kibana-ip",
       "type": "Microsoft.Resources/deployments",
       "apiVersion": "2019-05-01",
@@ -2057,7 +2057,7 @@
           }
         }
       }
-    },
+    },*/
     {
       "name": "loadbalancer",
       "type": "Microsoft.Resources/deployments",
@@ -2091,7 +2091,7 @@
       "apiVersion": "2019-05-01",
       "dependsOn": [
         "[concat('Microsoft.Resources/deployments/', 'loadbalancer')]",
-        "[concat('Microsoft.Resources/deployments/', 'kibana-ip')]"
+        //"[concat('Microsoft.Resources/deployments/', 'kibana-ip')]"
       ],
       "properties": {
         "mode": "Incremental",
@@ -2127,9 +2127,9 @@
               "suffix": "[reference('shared').outputs.existingStorageAccountSuffix.value]"
             }
           },
-          "kibanaIp": {
+          /*"kibanaIp": {
             "value": "[reference('kibana-ip').outputs.fqdn.value]"
-          },
+          },*/
           "sharedStorageAccount": {
             "value": {
               "name": "[variables('commonVmSettings').storageAccountName]",
@@ -2149,10 +2149,10 @@
       "value": "[reference('loadbalancer').outputs.fqdn.value]",
       "type": "string"
     },
-    "kibana": {
+    /*"kibana": {
       "value": "[reference('kibana-ip').outputs.fqdn.value]",
       "type": "string"
-    },
+    },*/
     "jumpboxssh": {
       "value": "[reference('virtual-machines').outputs.jumpboxssh.value]",
       "type": "string"
