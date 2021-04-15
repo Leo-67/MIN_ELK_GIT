@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-sudo mkdir /home/hbase_admin_ssh/test-prod
+sudo mkdir /home/spark_admin_ssh/test-prod
