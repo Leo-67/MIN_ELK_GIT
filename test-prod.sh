@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-sudo mkdir /home/analytic_admin/test-prod
+sudo mkdir /home/hbase_admin_ssh/test-prod
